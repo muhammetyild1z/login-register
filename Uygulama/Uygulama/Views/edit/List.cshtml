@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Uygulama.Models.uygulama>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+@if (User.IsInRole("A"))
+{
+<p>
+    <a href="/edit/create">  <button class="btn btn-primary " style="float:left">Yeni kayıt ekle</button></a>
+</p>
+}
+ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sehir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YETKİ)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sifre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sehir)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.YETKİ)
+    </td>
+    @if (User.IsInRole("A"))
+    {
+        <td>
+            <a href="/edit/edit/@item.ID"><button type="submit" class="btn btn-primary btn-lg" name="buton">Düzenle</button></a>
+            <a href="/edit/delete/@item.ID"><button type="submit" class="btn btn-primary btn-lg" name="buton">Sil</button></a>
+
+        </td>
+    }
+
+</tr>
+    }
+
+</table>

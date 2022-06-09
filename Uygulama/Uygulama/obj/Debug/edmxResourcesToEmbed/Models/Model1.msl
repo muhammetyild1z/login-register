@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kullanicilarModelStoreContainer" CdmEntityContainer="kullanicilarEntities1">
+    <EntitySetMapping Name="uygulama">
+      <EntityTypeMapping TypeName="kullanicilarModel.uygulama">
+        <MappingFragment StoreEntitySet="uygulama">
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Sehir" ColumnName="Sehir" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YETKİ" ColumnName="YETKİ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kullanicilarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="uygulama">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
+    <Property Name="Sehir" Type="varchar" MaxLength="50" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YETKİ" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="kullanicilarModelStoreContainer">
+    <EntitySet Name="uygulama" EntityType="Self.uygulama" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
